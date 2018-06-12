@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb-base/legacy", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-bitwise": ["error", { "allow": ["^"] }],
+    "no-nested-ternary": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "no-unused-vars": ["error", {"args": "none"}],
+    "max-len": ["error", { "code": 120, "ignoreUrls": true, "ignoreStrings": true, "ignoreRegExpLiterals": true }],
+    "comma-dangle": ["error", "never"],
+    "no-plusplus": [ "error", { "allowForLoopAfterthoughts": true } ],
+    "global-require": 0,
+    "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
+    "prefer-promise-reject-errors": 0,
+    "no-underscore-dangle": ["error", { "allow": ["__PRELOADED_STATE__"] }],
+    "no-shadow": ["error", { "hoist": "never", "allow": ["cn"] }]
+  }
+}
