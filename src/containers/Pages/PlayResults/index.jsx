@@ -2,10 +2,10 @@ import React from 'react';
 
 import './index.css';
 
-const PlayResults = () => (
+const Index = () => (
   <div className='play-results'>
    Result page
   </div>
 );
-export default PlayResults;
+export default Index;
 

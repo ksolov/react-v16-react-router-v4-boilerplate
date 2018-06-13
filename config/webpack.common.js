@@ -46,12 +46,12 @@ const webpackConfig = function (options) {
         {
           test: /\.p?css$/,
           use: [
-            { loader: 'style-loader' },
-            { loader: 'css-loader' },
+            'style-loader',
+            'css-loader',
             {
               loader: 'postcss-loader',
               options: {
-                postcss: getPostcssPlugins()
+                plugins: getPostcssPlugins()
               }
             }
           ]

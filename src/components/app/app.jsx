@@ -1,11 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { Route, Switch, Redirect, Link } from 'react-router-dom';
-import * as routes from '../../constants/routes';
-import Main from '../../containers/Pages/Main/Main';
-import Team from '../../containers/Pages/Team';
-import Play from '../../containers/Pages/Play/Play';
-import PlayResults from '../../containers/Pages/PlayResults/PlayResults';
+
+import Routes from '../../components/app/Routes';
+import Header from '../../components/Header';
 import '../../styles/index.css';
 import './app.css';
 
@@ -16,42 +13,9 @@ class App extends React.Component {
   render(cn) {
     return (
       <div className={ cn() } >
-        <ul>
-          <li><Link to={routes.index}>Main</Link></li>
-          <li><Link to={routes.team}>Team</Link></li>
-          <li><Link to={routes.play}>Play</Link></li>
-          <li><Link to={routes.result}>PlayResults</Link></li>
-        </ul>
-        <br/>
-        <br/>
-        <br/><br/>
+        <Header />
 
-        <Switch>
-          <Route
-            exact={ true }
-            path={ routes.index }
-            component={ Main }
-          />
-          <Route
-            exact={ true }
-            path={ routes.team }
-            component={Team}
-          />
-          <Route
-            exact={ true }
-            path={ routes.play }
-            component={Play}
-          />
-          <Route
-            exact={ true }
-            path={ routes.result }
-            component={PlayResults}
-          />
-          <Route
-            path='*'
-            render={() => <Redirect to={routes.index} />}
-          />
-        </Switch>
+        <Routes />
       </div>
     );
   }

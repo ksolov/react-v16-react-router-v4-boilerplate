@@ -5,7 +5,7 @@ import cn from '../../../utils/cn';
 import './index.css';
 
 @cn('main')
-class Main extends React.Component {
+class Index extends React.Component {
   static propTypes = {
     rnd: PropTypes.number
   };
@@ -25,4 +25,4 @@ const mapStateToProps = ({ app }) => ({
 
 let mapDispatchToProps = null;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
