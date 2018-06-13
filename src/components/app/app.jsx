@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import { Route, Switch, Redirect, Link } from 'react-router-dom';
 import * as routes from '../../constants/routes';
 import Main from '../../containers/Pages/Main/Main';
@@ -56,4 +57,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

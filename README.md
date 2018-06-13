@@ -1,4 +1,4 @@
-# React v16, React-Router v4, Webpack v4 boilerplate
+# React v16, React-Router v4, Webpack v4, React hot loader v4 boilerplate
 
 ## npm comands
 

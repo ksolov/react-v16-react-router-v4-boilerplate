@@ -13,7 +13,7 @@ class Main extends React.Component {
   render(cn) {
     return (
       <div className={ cn() }>
-       Main page {this.props.rnd}
+       Main page!!! {this.props.rnd}
       </div>
     );
   }
