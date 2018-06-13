@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: 0, global-require: 0 */
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
 const ENV = 'development';
@@ -10,12 +10,7 @@ const commonConfig = require('./webpack.common.js')({ env: ENV });
 
 const config = webpackMerge.smart(commonConfig, {
   devtool: 'cheap-inline-module-source-map',
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: 'body',
-      template: 'src/stub.html'
-    })
-  ]
+  plugins: [new webpack.NamedModulesPlugin()]
 });
 
 // uncomment if you want to see configs merge result
