@@ -12,7 +12,6 @@ import cn from '../../utils/cn';
 
 @cn('app')
 class App extends React.Component {
-
   render(cn) {
     return (
       <div className={ cn() } >
