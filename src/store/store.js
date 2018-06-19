@@ -19,19 +19,9 @@ export function configureStore(initialState = {}) {
     getDevTools()
   );
 
-  const store = createStore(
+  return createStore(
     reducers,
     initialState,
     enhanser
   );
-
-  if (module.hot) {
-    enhanser;
-    module.hot.accept('../reducers/reducers', () => {
-      const nextRootReducer = require('../reducers/reducers').default;
-      store.replaceReducer(nextRootReducer);
-    });
-  }
-
-  return store;
 }

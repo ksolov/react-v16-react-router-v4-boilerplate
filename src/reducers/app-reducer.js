@@ -1,4 +1,4 @@
-import * as actionTypes from '../constants/ActionTypes';
+// import * as actionTypes from '../constants/ActionTypes';
 
 let initialState = {
   rnd: Math.random()

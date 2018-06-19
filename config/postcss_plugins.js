@@ -13,31 +13,31 @@
 
 /* eslint import/no-extraneous-dependencies: 0, global-require: 0 */
 const plugins = function () {
-    return [
-        require('postcss-import'),
-        require('postcss-url')({
-            url: 'rebase'
-        }),
-        require('postcss-mixins'),
-        require('postcss-nested'),
-        require('postcss-calc'),
-        require('postcss-for'),
-        require('postcss-each'),
-        require('postcss-simple-vars')({
-            silent: true
-        }),
-        require('postcss-custom-media'),
-        require('postcss-custom-properties'),
-        require('autoprefixer')({
-            browsers: [
-                'last 3 versions',
-                'ie 10',
-                'ff 24',
-                'android 4.2',
-                'ios >= 5'
-            ]
-        })
-    ];
+  return [
+    require('postcss-import'),
+    require('postcss-url')({
+      url: 'rebase'
+    }),
+    require('postcss-mixins'),
+    require('postcss-nested'),
+    require('postcss-calc'),
+    require('postcss-for'),
+    require('postcss-each'),
+    require('postcss-simple-vars')({
+      silent: true
+    }),
+    require('postcss-custom-media'),
+    require('postcss-custom-properties'),
+    require('autoprefixer')({
+      browsers: [
+        'last 3 versions',
+        'ie 10',
+        'ff 24',
+        'android 4.2',
+        'ios >= 5'
+      ]
+    })
+  ];
 };
 
 module.exports = plugins;
