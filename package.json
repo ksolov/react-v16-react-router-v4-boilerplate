@@ -102,6 +102,5 @@
   "engines": {
     "node": ">= 6.9.2",
     "npm": ">= 3.10.8"
-  },
-  "repository": "https://gitlab.htc-cs.com/frontend/stubs/react-redux"
+  }
 }
